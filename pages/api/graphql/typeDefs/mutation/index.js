@@ -31,7 +31,7 @@ const Mutation = gql`
 
     removeLike(userId: String!, postId: String, commentId: String): response
 
-    removeComment(userId: String!, postId: String!): response
+    removeComment(commentId: String!): response
 
     removePost(postId: String!): response
   }

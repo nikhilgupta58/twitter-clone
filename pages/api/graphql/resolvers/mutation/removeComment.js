@@ -4,15 +4,14 @@ const prisma = new PrismaClient();
 const removeComment = {
   Mutation: {
     removeComment: async (_, args, __) => {
-      const comment = await prisma.comment.findFirst({
+      await prisma.like.deleteMany({
         where: {
-          userId: args.userId,
-          postId: args.postId,
+          commentId: args.commentId,
         },
       });
       await prisma.comment.delete({
         where: {
-          id: comment.id,
+          id: args.commentId,
         },
       });
       return {
