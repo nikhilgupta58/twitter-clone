@@ -2,7 +2,7 @@ import { useReactiveVar } from '@apollo/client';
 import { Flex, FlexProps, Spacer, Text, Image } from '@chakra-ui/react'
 import React from 'react'
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
-import { userInfoVar } from '../../../cache';
+import { userInfoVar } from '../../../pages/cache';
 import { useProfileContext } from './utils/context';
 import { FaUserCircle } from 'react-icons/fa'
 

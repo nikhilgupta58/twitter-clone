@@ -28,3 +28,20 @@ a {
     opacity: 0.5;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 1px rgb(0 0 0 / 10%);
+  padding: 1px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.384);
+  padding: 5px;
+  box-shadow: 0 0 1px rgb(0 0 0 / 10%);
+}

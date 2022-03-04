@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserProvider } from '@auth0/nextjs-auth0';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import theme from './theme';
 import { ApolloClient, ApolloProvider } from '@apollo/client';
 import { cache } from './cache';

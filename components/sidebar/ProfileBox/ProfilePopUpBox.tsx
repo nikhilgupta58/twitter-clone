@@ -3,7 +3,7 @@ import { Flex, Text, Image, Spacer, FlexProps, Button } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { TiTick } from 'react-icons/ti'
-import { userInfoVar } from '../../../cache'
+import { userInfoVar } from '../../../pages/cache'
 
 export default function ProfilePopUpBox({ ...props }: FlexProps) {
     const userDetails = useReactiveVar(userInfoVar)

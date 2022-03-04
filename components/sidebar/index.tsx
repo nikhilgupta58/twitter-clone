@@ -1,7 +1,7 @@
-import { Flex, Spacer } from '@chakra-ui/react'
+import { Flex, Spacer, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { BsTwitter } from 'react-icons/bs'
-import Navigate from '../../../components/Navigate'
+import Navigate from '../Navigate'
 import Navigator from './Navigator'
 import { ProfileBox } from './ProfileBox'
 import TweetBtn from './TweetBtn'
@@ -12,6 +12,8 @@ export default function SideBar() {
             justifyContent={'start'}
             flexDir='column'
             h='100vh'
+            top="0"
+            position="sticky"
         >
             <Flex
                 fontSize={'28px'}
