@@ -24,10 +24,10 @@ model Like {
   id        String   @id @unique @default(uuid())
   createdAt String
   userId    String
-  user      User?    @relation(fields: [userId], references: [id])
-  post      Post?    @relation(fields: [postId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post      Post?    @relation(fields: [postId], references: [id], onDelete: Cascade)
   postId    String?
-  comment   Comment? @relation(fields: [commentId], references: [id])
+  comment   Comment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
   commentId String?
 }
 
@@ -35,7 +35,7 @@ model Post {
   id        String    @id @unique @default(uuid())
   createdAt String
   userId    String
-  user      User?     @relation(fields: [userId], references: [id])
+  user      User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
   like      Like[]
   body      String
   image     String?
@@ -43,10 +43,10 @@ model Post {
 }
 
 model Comment {
-  id        String  @id @unique @default(uuid())
+  id        String @id @unique @default(uuid())
   createdAt String
-  user      User?   @relation(fields: [userId], references: [id])
-  post      Post?   @relation(fields: [postId], references: [id])
+  user      User?  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  post      Post?  @relation(fields: [postId], references: [id], onDelete: Cascade)
   like      Like[]
   message   String
   userId    String

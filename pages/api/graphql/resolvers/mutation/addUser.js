@@ -10,7 +10,7 @@ const addUser = {
         },
       });
       if (user) {
-        await prisma.user.update({
+        return await prisma.user.update({
           where: {
             email: args.email,
           },
@@ -20,21 +20,14 @@ const addUser = {
             name: args.name,
           },
         });
-        return {
-          message: "User Updated Successfully",
-        };
       }
-      await prisma.user.create({
+      return await prisma.user.create({
         data: {
           email: args.email,
           avatar: args.avatar,
           name: args.name,
         },
       });
-      
-      return {
-        message: "User added Successfully",
-      };
     },
   },
 };

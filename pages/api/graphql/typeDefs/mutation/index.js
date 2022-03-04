@@ -6,7 +6,7 @@ const Mutation = gql`
   }
 
   type Mutation {
-    addUser(email: String!, avatar: String, name: String!): response
+    addUser(email: String!, avatar: String, name: String!): User
 
     addPost(
       body: String!
