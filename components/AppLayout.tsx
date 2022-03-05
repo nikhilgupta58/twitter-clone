@@ -1,5 +1,6 @@
-import { Flex, HStack } from '@chakra-ui/react'
+import { Flex, HStack, StackDivider } from '@chakra-ui/react'
 import React from 'react'
+import RightSideBar from './rightSIdeBar'
 import SideBar from './sidebar'
 
 export default function AppLayout({ children }) {
@@ -10,9 +11,14 @@ export default function AppLayout({ children }) {
             justifyContent={'center'}
             alignItems="start"
             spacing={0}
+            divider={<StackDivider borderColor={"#E4E7EC"} />}
         >
             <SideBar />
-            {children}
+            <Flex h="100%"
+            >
+                {children}
+                <RightSideBar />
+            </Flex>
         </HStack>
     )
 }

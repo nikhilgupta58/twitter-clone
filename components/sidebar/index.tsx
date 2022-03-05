@@ -14,6 +14,7 @@ export default function SideBar() {
             h='100vh'
             top="0"
             position="sticky"
+            px='12px'
         >
             <Flex
                 fontSize={'28px'}

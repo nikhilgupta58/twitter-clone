@@ -3,7 +3,9 @@ import React from 'react'
 import { RiQuillPenFill } from 'react-icons/ri'
 export default function TweetBtn({ ...props }: FlexProps) {
     return (
-        <Flex>
+        <Flex
+            w='80%'
+        >
             <Flex {...props}
                 bgColor='rgb(29, 155, 240)'
                 boxShadow={'rgb(0 0 0 / 8%) 0px 8px 28px'}

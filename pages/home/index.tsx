@@ -12,8 +12,12 @@ export default function Home() {
             </Head>
 
             <AppLayout>
-                <Flex h="100%" flexDir="column">
-                    <Flex w='100px' h='2000px' border={'1px solid'}></Flex>
+                <Flex
+                    w='100px'
+                    h='3000px'
+                    borderRight={'1px solid #E4E7EC'}
+                >
+                    
                 </Flex>
             </AppLayout>
         </>
