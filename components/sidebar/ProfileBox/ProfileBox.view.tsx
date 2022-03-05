@@ -5,6 +5,7 @@ import { BiDotsHorizontalRounded } from 'react-icons/bi'
 import { userInfoVar } from '../../../pages/cache';
 import { useProfileContext } from './utils/context';
 import { FaUserCircle } from 'react-icons/fa'
+import ProfileImage from './ProfileImage';
 
 export default function ProfileBoxView({ ...props }: FlexProps) {
     const userDetails = useReactiveVar(userInfoVar)
@@ -22,23 +23,7 @@ export default function ProfileBoxView({ ...props }: FlexProps) {
                     bgColor: 'gray.100'
                 }}
             >
-                <Flex
-                    maxW='52px'
-                    h='52px'
-                    borderRadius={'100%'}
-                    overflow='hidden'
-                    onClick={clickHandler}
-                    cursor='pointer'
-                >
-                    <Image
-                        src={userDetails?.avatar}
-                        alt='avatar'
-                        width='100%'
-                        height='100%'
-                        objectFit='contain'
-                        fallbackSrc='/user.png'
-                    />
-                </Flex>
+                <ProfileImage url={userDetails?.avatar} clickHandler={clickHandler} />
                 <Flex
                     flexDir={'column'}
                     mx='12px'

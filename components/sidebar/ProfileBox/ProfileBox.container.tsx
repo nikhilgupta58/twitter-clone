@@ -7,11 +7,16 @@ import ProfileBoxView from './ProfileBox.view';
 import ProfileLoading from './ProfileLoading';
 import ProfilePopUpBox from './ProfilePopUpBox';
 import { ProfileBox } from './utils/context';
+import { queryErrorHandler } from '../../ErrorToast';
 
 export default function ProfileBoxContainer() {
     const { user, error, isLoading: authOLoading } = useUser();
     const [showPopup, setShowPopUp] = React.useState('none')
-    const [addUser, { data: userInfo, loading: addUserLoading }] = useMutation(ADD_USER);
+    const [addUser, { data: userInfo, loading: addUserLoading }] = useMutation(ADD_USER, {
+        onError(err) {
+            queryErrorHandler(err)
+        }
+    });
     React.useEffect(() => {
         if (user) {
             addUser({

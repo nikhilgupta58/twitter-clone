@@ -14,11 +14,8 @@ export default function AppLayout({ children }) {
             divider={<StackDivider borderColor={"#E4E7EC"} />}
         >
             <SideBar />
-            <Flex h="100%"
-            >
-                {children}
-                <RightSideBar />
-            </Flex>
+            {children}
+            <RightSideBar />
         </HStack>
     )
 }

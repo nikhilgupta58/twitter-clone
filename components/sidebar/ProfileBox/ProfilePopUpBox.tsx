@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import { TiTick } from 'react-icons/ti'
 import { userInfoVar } from '../../../pages/cache'
+import ProfileImage from './ProfileImage'
 
 export default function ProfilePopUpBox({ ...props }: FlexProps) {
     const userDetails = useReactiveVar(userInfoVar)
@@ -96,21 +97,7 @@ const ProfileBox = () => {
     if (userDetails?.id) {
         return (
             <>
-                <Flex
-                    maxW='52px'
-                    h='52px'
-                    borderRadius={'100%'}
-                    overflow='hidden'
-                    cursor='pointer'
-                >
-                    <Image
-                        src={userDetails?.avatar}
-                        alt='avatar'
-                        width='100%'
-                        height='100%'
-                        objectFit='contain'
-                    />
-                </Flex>
+                <ProfileImage url={userDetails?.avatar}/>
                 <Flex
                     flexDir={'column'}
                     mx='12px'

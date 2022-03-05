@@ -8,11 +8,9 @@ import Article from './utils/Article'
 import Trend from './utils/Trend'
 export default function RightSideBar() {
     return (
+
         <VStack
-            position={'sticky'}
-            top='1'
-            alignItems={'start'}
-            maxH='100vh'
+            mt='4px'
             overflowY={'auto'}
             px='40px'
             sx={{
@@ -28,6 +26,11 @@ export default function RightSideBar() {
                 sm: 'none',
                 md: 'initial'
             }}
+            justifyContent={'start'}
+            flexDir='column'
+            h='100vh'
+            top="0"
+            position="sticky"
         >
             <Flex
                 flexDir={'column'}
