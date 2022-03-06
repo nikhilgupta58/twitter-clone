@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "prisma/db.db"
+  url      = "file:/twitter-clone/prisma/db.db"
 }
 
 model User {
