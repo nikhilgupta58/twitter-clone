@@ -4,6 +4,7 @@ const Query = gql`
   type Query {
     allPosts: [Post]
     allUsers: [User]
+    getPost(postId: String!): Post
   }
 `;
 

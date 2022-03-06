@@ -1,15 +1,13 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-const allPosts = {
+const getPost = {
   Query: {
-    allPosts: async () => {
-      return await prisma.post.findMany({
-        orderBy: [
-          {
-            createdAt: "desc",
-          },
-        ],
+    getPost: async (_, args, __) => {
+      return await prisma.post.findUnique({
+        where: {
+          id: args.postId,
+        },
         include: {
           like: {
             postId: prisma.post.id,
@@ -39,4 +37,4 @@ const allPosts = {
   },
 };
 
-export default allPosts;
+export default getPost;

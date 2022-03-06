@@ -1,12 +1,15 @@
 import { useMutation, useReactiveVar } from '@apollo/client'
+import { useRouter } from 'next/router'
 import React from 'react'
 import { userInfoVar } from '../../../../pages/cache'
 import ADD_POST from '../../../../Query/ADD_POST'
+import ALL_POST from '../../../../Query/All_POST'
 import { queryErrorHandler } from '../../../ErrorToast'
 import PostBoxView from './PostBox.view'
 import { PostContext } from './utils/context'
 
 export default function PostBoxContainer() {
+    const router = useRouter()
     const imageRef = React.useRef(null)
     const postRef = React.useRef(null)
     const addImageToPost = async () => {
@@ -31,6 +34,9 @@ export default function PostBoxContainer() {
     }
 
     const [addPost, { loading: addPostLoading }] = useMutation(ADD_POST, {
+        refetchQueries: [
+            { query: ALL_POST }
+        ],
         onError(err) {
             queryErrorHandler(err)
         },
@@ -38,6 +44,9 @@ export default function PostBoxContainer() {
     const userDetails = useReactiveVar(userInfoVar)
 
     const onTweet = () => {
+        if (!userDetails?.id) {
+            router.push('/api/auth/login')
+        }
         addPost({
             variables: {
                 "body": body,
@@ -46,6 +55,8 @@ export default function PostBoxContainer() {
                 "image": selected
             }
         });
+        setSelected(null)
+        setBody('')
     }
 
     const removeImage = () => {

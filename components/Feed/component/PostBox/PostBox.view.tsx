@@ -9,27 +9,33 @@ import { TiDeleteOutline } from 'react-icons/ti'
 
 export default function PostBoxView() {
     const userDetails = useReactiveVar(userInfoVar)
-    const { selected, addImageToPost, uploadImage, imageRef, body, setHeading, onTweet, addPostLoading,removeImage } = usePostContext()
+    const { selected, addImageToPost, uploadImage, imageRef, body, setHeading, onTweet, addPostLoading, removeImage } = usePostContext()
     return (
         <Flex
             bgColor='rgba(255,255,255,1.00)'
             py={'4px'}
             px={'16px'}
+            w='100%'
         >
             <Flex
                 justifyContent={'start'}
                 alignItems='start'
+                w='100%'
             >
-                <ProfileImage url={userDetails?.avatar} />
+                <Flex>
+                    <ProfileImage url={userDetails?.avatar} />
+                </Flex>
                 <Flex
                     flexDir={'column'}
                     ml='10px'
+                    w='100%'
                 >
                     <Flex
-                        w={'500px'}
+                        w='100%'
                         mt='12px'
                         borderBottom='1px solid #E4E7EC'
                         flexDir={'column'}
+                        flex={1}
                     >
                         <Textarea
                             placeholder="What's happening"

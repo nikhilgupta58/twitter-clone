@@ -1,0 +1,1 @@
+export { default as CommentStata } from './CommentStats.container'

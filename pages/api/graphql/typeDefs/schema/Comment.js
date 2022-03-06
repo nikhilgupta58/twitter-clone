@@ -7,6 +7,8 @@ const Comment = gql`
     postId: String!
     userId: String!
     createdAt: String!
+    user: User!
+    like: [Like!]!
   }
 `;
 
