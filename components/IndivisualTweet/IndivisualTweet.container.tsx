@@ -6,6 +6,7 @@ import ADD_COMMENT from '../../Query/ADD_COMMENT'
 import ALL_POST from '../../Query/All_POST'
 import GET_POST from '../../Query/GET_POST'
 import { queryErrorHandler } from '../ErrorToast'
+import LoadingState from '../LoadingState'
 import IndivisualTweetView from './IndivisualTweet.view'
 import { IndivisualTweetContext } from './utils/context'
 
@@ -55,7 +56,9 @@ export default function IndivisualTweetContainer() {
 
     if (loading)
         return (
-            <>Loading...</>
+            <>
+                <LoadingState />
+            </>
         )
     return (
         <IndivisualTweetContext.Provider value={{

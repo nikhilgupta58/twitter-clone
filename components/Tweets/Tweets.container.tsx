@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client'
 import React from 'react'
 import ALL_POST from '../../Query/All_POST'
 import { queryErrorHandler } from '../ErrorToast'
+import LoadingState from '../LoadingState'
 import TweetsView from './Tweets.view'
 import { TweetsContext } from './utils/context'
 
@@ -13,7 +14,10 @@ export default function TweetsContainer() {
     })
     if (loading)
         return (
-            <>Loading...</>
+            <>
+                <LoadingState />
+                <LoadingState />
+            </>
         )
     return (
         <TweetsContext.Provider value={{
