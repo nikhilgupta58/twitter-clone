@@ -1,7 +1,7 @@
 import { useMutation, useReactiveVar } from '@apollo/client'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { userInfoVar } from '../../../../pages/cache'
+import { userInfoVar } from '../../../../Files/cache'
 import ADD_POST from '../../../../Query/ADD_POST'
 import ALL_POST from '../../../../Query/All_POST'
 import { queryErrorHandler } from '../../../ErrorToast'

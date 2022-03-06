@@ -1,10 +1,10 @@
 import React from 'react';
 import { UserProvider } from '@auth0/nextjs-auth0';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
-import theme from './theme';
+import theme from '../Files/theme';
 import { ApolloClient, ApolloProvider } from '@apollo/client';
-import { cache } from './cache';
 import '../styles/globals.css'
+import { cache } from '../Files/cache';
 
 export default function MyApp({ Component, pageProps }) {
   const client = new ApolloClient({

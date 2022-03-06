@@ -1,7 +1,7 @@
 import { useReactiveVar } from '@apollo/client'
 import { Button, Flex, Input, Spacer, StackDivider, Text, Textarea, VStack } from '@chakra-ui/react'
 import React from 'react'
-import { userInfoVar } from '../../pages/cache'
+import { userInfoVar } from '../../Files/cache'
 import { IPost } from '../../types/IPost'
 import CommentBox from '../CommentBox'
 import ProfileImage from '../sidebar/ProfileBox/ProfileImage'

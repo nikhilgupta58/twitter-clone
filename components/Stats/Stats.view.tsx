@@ -2,7 +2,7 @@ import { useReactiveVar } from '@apollo/client'
 import { Flex, Text } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { userInfoVar } from '../../pages/cache'
+import { userInfoVar } from '../../Files/cache'
 import { useStatsContext } from './utils/context'
 export default function StatsView() {
     const { data, Stat } = useStatsContext()

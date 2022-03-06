@@ -2,10 +2,10 @@ import { useReactiveVar } from '@apollo/client';
 import { Flex, FlexProps, Spacer, Text, Image } from '@chakra-ui/react'
 import React from 'react'
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
-import { userInfoVar } from '../../../pages/cache';
 import { useProfileContext } from './utils/context';
 import { FaUserCircle } from 'react-icons/fa'
 import ProfileImage from './ProfileImage';
+import { userInfoVar } from '../../../Files/cache';
 
 export default function ProfileBoxView({ ...props }: FlexProps) {
     const userDetails = useReactiveVar(userInfoVar)

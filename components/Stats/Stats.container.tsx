@@ -6,7 +6,7 @@ import { AiOutlineDelete, AiOutlineRetweet, AiOutlineHeart } from 'react-icons/a
 import { FcLike } from 'react-icons/fc'
 import { FiShare } from 'react-icons/fi'
 import { VscComment } from 'react-icons/vsc'
-import { userInfoVar } from '../../pages/cache'
+import { userInfoVar } from '../../Files/cache'
 import ADD_LIKE from '../../Query/ADD_LIKE'
 import ALL_POST from '../../Query/All_POST'
 import GET_POST from '../../Query/GET_POST'

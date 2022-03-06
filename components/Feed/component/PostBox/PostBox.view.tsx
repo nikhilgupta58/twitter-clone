@@ -1,11 +1,11 @@
 import { useReactiveVar } from '@apollo/client'
 import { Button, Flex, Image, Spacer, Textarea } from '@chakra-ui/react'
 import React from 'react'
-import { userInfoVar } from '../../../../pages/cache'
 import InputItems from '../../../InputItems'
 import ProfileImage from '../../../sidebar/ProfileBox/ProfileImage'
 import { usePostContext } from './utils/context'
 import { TiDeleteOutline } from 'react-icons/ti'
+import { userInfoVar } from '../../../../Files/cache'
 
 export default function PostBoxView() {
     const userDetails = useReactiveVar(userInfoVar)

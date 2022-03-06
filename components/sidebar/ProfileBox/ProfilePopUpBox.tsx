@@ -3,7 +3,7 @@ import { Flex, Text, Image, Spacer, FlexProps, Button } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { TiTick } from 'react-icons/ti'
-import { userInfoVar } from '../../../pages/cache'
+import { userInfoVar } from '../../../Files/cache'
 import ProfileImage from './ProfileImage'
 
 export default function ProfilePopUpBox({ ...props }: FlexProps) {
