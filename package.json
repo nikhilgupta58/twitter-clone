@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cp ./prisma/db.db /tmp/ && next build",
+    "build": "cp ./prisma/db.db /tmp/ && prisma generate && prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint"
   },
