@@ -71,6 +71,7 @@ export default function IndivisualTweetView() {
                     }}
                     onClick={addCommentHandler}
                     isLoading={addCommentLoading}
+                    disabled={message === '' ? true : false}
                 >
                     Reply
                 </Button>
