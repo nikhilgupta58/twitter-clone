@@ -18,6 +18,8 @@
     "@emotion/styled": "^11.8.1",
     "@prisma/client": "3.10.0",
     "apollo-server-micro": "^3.6.3",
+    "axios": "^0.26.0",
+    "cloudinary-react": "^1.7.1",
     "framer-motion": "^6.2.8",
     "graphql": "^16.3.0",
     "micro": "^9.3.4",
